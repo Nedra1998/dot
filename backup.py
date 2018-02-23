@@ -99,11 +99,14 @@ def get_repo_age(conf):
 
 def remove_age(conf):
     for value in conf['files']:
-        del value[-1]
+        if len(value) == 3:
+            del value[-1]
     for value in conf['dirs']:
-        del value[-1]
-    for value in conf['repo']:
-        del value[-1]
+        if len(value) == 3:
+            del value[-1]
+    for value in conf['repos']:
+        if len(value) == 3:
+            del value[-1]
 
 
 def should_add_data(args):
@@ -205,7 +208,9 @@ def list_data(color, uni):
                     value = ["\ue24f " + x for x in value]
             widest = max(len(x) for x in value)
             padded = [x.ljust(widest) for x in value]
-            perline = widest + 2
+            perline = (int(os.popen('stty size', 'r').read().split()
+                           [1]) - 4) // (widest + 2)
+            print
             for i, col in enumerate(padded):
                 if color and update[i] < 0:
                     print("\033[31m{}\033[0m".format(col), end='  ')
@@ -226,8 +231,9 @@ def list_data(color, uni):
                         print("\033[34m{}\033[0m".format(col), end='  ')
                 else:
                     print("{}".format(col), end='  ')
-                if i % perline == perline - 1:
-                    print('\n  ', end='')
+                if perline == 0 or i % perline == perline - 1:
+                    if i != len(padded) - 1:
+                        print('\n  ', end='')
         else:
             if color:
                 print("\033[90mNone\033[0m", end='')
@@ -303,7 +309,7 @@ def sync_files(color, uni):
             print("  \033[90mNo files to sync\033[0m")
         else:
             print("  No files to sync")
-    remove_file_age(conf)
+    remove_age(conf)
     save_data(conf)
 
 
@@ -342,7 +348,7 @@ def sync_dirs(color, uni):
             print("  \033[90mNo directories to sync\033[0m")
         else:
             print("  No directories to sync")
-    remove_file_age(conf)
+    remove_age(conf)
     save_data(conf)
 
 

@@ -1,0 +1,48 @@
+{
+  "theme": {
+    "background": 40,
+    "title": [97, -1, 1, 4],
+    "add": [33, -1],
+    "completed": [32, -1],
+    "delete": [31, -1],
+    "start": [33, -1],
+    "stop": [33, -1],
+    "err": [31, -1, 1],
+    "warn": [33, -1, 1],
+    "overdue": [30, 41],
+    "due_today": [31, 43],
+    "urg10": [31, -1, 1],
+    "urg9": [31, -1],
+    "urg8": [31, -1],
+    "urg7": [33, -1],
+    "active": [30, 42],
+    "reports": {
+      "burndown": {
+        "pending": [-1, 41],
+        "started": [-1, 43],
+        "done": [-1, 42]
+      },
+      "calendar": {
+        "active": [-1, -1, 7],
+        "weekend": [-1, 40],
+        "urg6": [34, -1],
+        "urg5": [34, -1],
+        "urg4": [34, -1],
+        "urg3": [34, -1],
+        "urg2": [34, -1],
+        "urg1": [34, -1]
+      },
+      "graph": {
+        "active": [32, -1]
+      }
+    }
+  },
+  "settings": {
+    "reports": {
+      "graph": {
+        "start": 10,
+        "end": 24
+      }
+    }
+  }
+}

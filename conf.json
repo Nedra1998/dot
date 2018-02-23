@@ -1,0 +1,24 @@
+{
+  "files": [
+    ["/home/arden/.config/compton.conf", 1510787477.936579],
+    ["/home/arden/.profile", 1518890504.9857142],
+    ["/home/arden/.zshrc", 1519428122.8847363]
+  ],
+  "dirs": [
+    ["/home/arden/.config/dunst", 1511825788.130703],
+    ["/home/arden/.config/i3", 1518746531.269771],
+    ["/home/arden/.config/laboris", 1519192098.793135],
+    ["/home/arden/.config/polybar", 1514904369.7303255],
+    ["/home/arden/.config/termite", 1518743981.0820835]
+  ],
+  "cmds": ["curl -sL --proto-redir -all,https https://raw.githubusercontent.com/Corwind/termite-install/master/termite-install.sh | bash", "curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh| zsh", "curl https://sh.rustup.rs -sSf | sh"],
+  "pkgs": ["ascii", "autoconf", "autojump", "automake", "build-essential", "clang-5.0", "clang-format-5.0", "clisp", "cmake", "compton", "doxygen", "gcc-7", "git", "gnat", "golang-go", "graphviz", "htop", "lcov", "libev-dev", "libicu-dev", "libpango1.0-dev", "libstartup-notification0-dev", "libxcb-cursor-dev", "libxcb-icccm4-dev", "libxcb-keysyms1-dev", "libxcb-randr0-dev", "libxcb-util0-dev", "libxcb-xinerama0-dev", "libxcb-xkb-dev", "libxcb-xrm-dev", "libxcb-xrm0", "libxcb1-dev", "libxkbcommon-dev", "libxkbcommon-x11-dev", "libyajl-dev", "lua5.2", "lynx", "neovim", "nitrogen", "nodejs", "npm", "openjdk-9-jdk", "openjdk-9-jre", "pandoc", "perl", "playerctl", "python-neovim", "python3", "python3-neovim", "ruby", "rustc", "screenfetch", "texlive", "texlive-full", "texlive-luatex", "unicode", "zathura", "zsh"],
+  "repos": [
+    ["https://github.com/Airblade/i3", "/home/arden/i3-gaps"],
+    ["https://github.com/Nedra1998/vim", "/home/arden/.config/nvim"],
+    ["https://github.com/ardenrasmussen/Documents", "/home/arden/Documents"],
+    ["https://github.com/kylef/swiftenv", "/home/arden/.swiftenv"],
+    ["https://github.com/pyenv/pyenv.git", "/home/arden/.pyenv"],
+    ["https://github.com/ryanoasis/nerd-fonts", "/home/arden/nerd-fonts"]
+  ]
+}
