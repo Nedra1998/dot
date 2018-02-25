@@ -38,6 +38,8 @@ zplug load
 # Path {{{
 export PATH=/home/arden/.pyenv/bin:$PATH
 export PATH=/home/arden/.swiftenv/bin:$PATH
+export PATH=/home/arden/.cargo/bin:$PATH
+export PATH=/home/arden/bin:$PATH
 # }}}
 
 # Theme Settings {{{
@@ -47,7 +49,7 @@ ORAVI_DIR_TRUNC=true
 # Aliases {{{
 
 # alias ls='ls --color=auto'
-alias ls='exa'
+# alias ls='exa'
 alias py='bpython'
 # Edit Commands {{{
 alias ezsh='vim ~/.zshrc'
@@ -68,7 +70,7 @@ export FZF_DEFAULT_OPTS='--color=fg:#ECEFF1,bg:#263238,hl:#FFEB3B,fg+:#ECEFF1,bg
 
 # PyEnv {{{
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv virtualenv-init -)"
 # }}}
 # SwiftEnv {{{
 eval "$(swiftenv init -)"

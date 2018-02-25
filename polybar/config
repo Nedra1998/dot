@@ -86,7 +86,7 @@ font-2 = unifont:fontformat=truetype:size=12;0
 
 modules-left = i3 xwindow
 modules-center = date
-modules-right = cpu memory volume power backlight fs update
+modules-right = cpu memory volume battery backlight fs update
 
 tray-position = right
 tray-padding = 9
@@ -124,8 +124,7 @@ font-0 = "SauceCodePro Nerd Font:size=10;0"
 font-1 = unifont:fontformat=truetype:size=10;0
 
 modules-left = music prev play next
-; modules-left =
-modules-center =  
+modules-center =
 modules-right = network
 
 tray-position = right
@@ -163,7 +162,7 @@ label-urgent-padding = 1
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 10
 time = "%a %b %d, %I:%M %p"
 label = %date% %time%
 format-prefix-foreground = ${colors.foreground}
@@ -173,16 +172,16 @@ format-padding = 5
 [module/memory]
 type =custom/script
 exec = ~/bin/sys/memory.py "{percent}% {bar}"
-interval = 5
+interval = 10
 format-underline = ${colors.orange}
 format-padding = 1
 
-[module/power]
-type = custom/script
-exec = ~/bin/sys/power.py "{icon} {percent}%"
-interval = 10
-format-underline = ${colors.green}
-format-padding = 1
+; [module/power]
+; type = custom/script
+; exec = ~/bin/sys/power.py "{icon} {percent}%"
+; interval = 10
+; format-underline = ${colors.green}
+; format-padding = 1
 
 [module/battery]
 type = internal/battery
@@ -199,9 +198,9 @@ ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
 format-charging-underline = ${colors.green}
-format-charging-padding = 1
+format-charging-padding = 2
 format-discharging-underline = ${colors.green}
-format-discaarging-padding = 1
+format-discharging-padding = 2
 
 [module/volume]
 type = internal/volume
@@ -234,7 +233,7 @@ format-padding = 1
 
 [module/cpu]
 type = internal/cpu
-interval = 5
+interval = 10
 format = <label> <ramp-coreload>
 label = %percentage%%
 ramp-coreload-0 = ▁
@@ -252,7 +251,7 @@ format-padding = 1
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
-label-padding = 5
+label-padding = 10
 label-foreground = ${colors.color04}
 
 [module/network]
@@ -262,6 +261,7 @@ format-connected = <ramp-signal> <label-connected>
 format-disconnected = <label-disconnected>
 format-packetloss = <animation-packetloss> <label-connected>
 label-connected = %essid% %downspeed:5%
+interval=300
 ; label-connected-foreground = #eefafafa
 label-disconnected = Not Connected
 label-disconnected-foreground = #66ffffff
@@ -335,7 +335,7 @@ format-underline = ${colors.cyan}
 [module/fs]
 type = custom/script
 exec = ~/bin/sys/filesystem.py "{availableAuto}{availableSufix}"
-interval = 120
+interval = 300
 format-padding = 1
 format-underline = ${colors.blue}
 
