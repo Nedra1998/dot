@@ -49,7 +49,7 @@ ORAVI_DIR_TRUNC=true
 # Aliases {{{
 
 # alias ls='ls --color=auto'
-# alias ls='exa'
+alias ls='exa'
 alias py='bpython'
 # Edit Commands {{{
 alias ezsh='vim ~/.zshrc'

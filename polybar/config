@@ -202,6 +202,11 @@ format-charging-padding = 2
 format-discharging-underline = ${colors.green}
 format-discharging-padding = 2
 
+[module/power]
+type=custom/script
+exec = ~/bin/sys/power.py "--notify"
+interval=60
+
 [module/volume]
 type = internal/volume
 format-volume-underline = ${colors.yellow}
@@ -334,7 +339,7 @@ format-underline = ${colors.cyan}
 
 [module/fs]
 type = custom/script
-exec = ~/bin/sys/filesystem.py "{availableAuto}{availableSufix}"
+exec = ~/bin/sys/filesystem.py "{icon}{availableAuto}{availableSufix}"
 interval = 300
 format-padding = 1
 format-underline = ${colors.blue}
